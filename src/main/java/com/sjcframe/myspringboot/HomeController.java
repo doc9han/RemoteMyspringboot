@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
+    private int gIncreaes = -1;
 
     @GetMapping("/myhome/main")
     @ResponseBody
@@ -21,4 +22,9 @@ public class HomeController {
         return "hi 방가방가";
     }
 
+    @GetMapping("/myhome/main1")
+    @ResponseBody
+    public int showIncrease(){
+        return gIncreaes ++;
+    }
 }
